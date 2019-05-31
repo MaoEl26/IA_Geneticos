@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace GE_Employees
 {
-    class Class1
+
+    class AlgoritmoGenetico
     {
+
     }
 }
