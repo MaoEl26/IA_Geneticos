@@ -134,7 +134,6 @@ namespace GE_Employees
         {
             int indiceMejorFit = -1;
 
-            // Recalculate fitness for every chromosome
             for (int i = 0; i < tamannoPoblacion; ++i)
             {
                 fitnessXGen[i] = Fitness(i);
