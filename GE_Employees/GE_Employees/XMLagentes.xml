@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agentes>
+    <agente>
+        <nombre>Mario Vargas</nombre>
+        <servicios>ICE, ICG</servicios>
+        <identificador>1</identificador>
+    </agente>
+    <agente>
+        <nombre>Luis Blanco</nombre>
+        <servicios>ICG, ILA, RCE</servicios>
+        <identificador>2</identificador>
+    </agente>
+    <agente>
+        <nombre>Esteban Montero</nombre>
+        <servicios>ILA, RCG</servicios>
+        <identificador>3</identificador>
+    </agente>
+    <agente>
+        <nombre>Alvaro Mora</nombre>
+        <servicios>RLA</servicios>
+        <identificador>4</identificador>
+    </agente>
+    <agente>
+        <nombre>Felipe Chinchilla</nombre>
+        <servicios>ICE, ICG, ILA, RCG</servicios>
+        <identificador>5</identificador>
+    </agente>
+    <agente>
+        <nombre>Carlos Brenes</nombre>
+        <servicios>ILA, RCG, RLA</servicios>
+        <identificador>6</identificador>
+    </agente>
+    <agente>
+        <nombre>Orlando Mora</nombre>
+        <servicios>ILA, RCG, ICG, RLA</servicios>
+        <identificador>7</identificador>
+    </agente>
+    <agente>
+        <nombre>Marco Rodriguez</nombre>
+        <servicios>ICE</servicios>
+        <identificador>8</identificador>
+    </agente>
+    <agente>
+        <nombre>John Hernandez</nombre>
+        <servicios>ILA, RLA</servicios>
+        <identificador>9</identificador>
+    </agente>
+    <agente>
+        <nombre>Martin Quesada</nombre>
+        <servicios>ICG, RLA</servicios>
+        <identificador>10</identificador>
+    </agente>
+
+</agentes>
