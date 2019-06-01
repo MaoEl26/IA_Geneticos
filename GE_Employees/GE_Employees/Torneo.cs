@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace GE_Employees
 {
-    class Aleatorio : Tipo
+    class Torneo:Tipo
     {
-        public Aleatorio(string nombre): base(nombre){}
-
-        public override Tuple<int,int> Seleccion(List<float> fitness)
+        public Torneo(string nombre):base(nombre){}
+        public override Tuple<int, int> Seleccion(List<float> fitness)
         {
             if (fitness.Count() <= 1) return Tuple.Create<int, int>(0, 0);
 
