@@ -1,17 +1,22 @@
-using System;
-using System.Xml;
-using System.Linq;
-using System.Xml.Linq;
+﻿using System;
 using System.Collections.Generic;
-using GE_Employees;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 
-namespace proyecto2IA
+namespace GE_Employees
 {
-    class MainClass
+    class LoadXMLAgentes
     {
-        public static void Main(string[] args)
+        public int identificador;
+        public string nombre;
+        public List<List<string>> codigosServicio = new List<List<string>>();      // Para almacenar los codigos como listas y no strings
+        public List<Colaborador> colaboradores = new List<Colaborador>();          // Para almacenar los objetos colaboradores
+        public void parseXML(string agentesFile)
         {
-            XDocument xdoc = XDocument.Load("Agentes.xml");                     // Aqui obtiene los nombres del XML
+            XDocument xdoc = XDocument.Load(agentesFile);                     // Aqui obtiene los nombres del XML
             string[] nombres = xdoc.Descendants("agente")
                      .SelectMany(node => node.Elements("nombre")
                      .Select(v => v.Value)).ToArray();
@@ -24,13 +29,8 @@ namespace proyecto2IA
                      .SelectMany(node => node.Elements("identificador")
                      .Select(v => v.Value)).ToArray();
 
-            int identificador;
-            string nombre;
-            List<List<string>> codigosServicio = new List<List<string>>();      // Para almacenar los codigos como listas y no strings
-            List<Colaborador> colaboradores = new List<Colaborador>();          // Para almacenar los objetos colaboradores
 
-
-            for (int i = 0; i < nombres.Length; i++)                            
+            for (int i = 0; i < nombres.Length; i++)
             {
 
                 identificador = (Int32.Parse(IDs[i]));
@@ -39,23 +39,11 @@ namespace proyecto2IA
                 string[] servicio = servicios[i].Split(',');                    // Lista de codigos de strings a array
                 List<string> listServ = new List<string>(servicio);
                 codigosServicio.Add(listServ);
-                                                                                // Agrega al colaborador
+                // Agrega al colaborador
                 Colaborador c = new Colaborador(identificador, nombre, codigosServicio[i]);
                 colaboradores.Add(c);
 
             }
-
-            for (int i = 0; i < nombres.Length; i++)                            // Esto es para imprimirlos todos
-            {
-                Console.WriteLine("Colaborador: ");
-                Console.WriteLine(colaboradores[i].identificador);
-                Console.WriteLine(colaboradores[i].nombre);
-                for (int a = 0; a < colaboradores[i].codigosServicio.Count; a++)
-                    Console.WriteLine(colaboradores[i].codigosServicio[a]);
-            }
-           
-
-
         }
     }
 }

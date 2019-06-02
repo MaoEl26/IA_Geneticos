@@ -41,16 +41,16 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(36, 70);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(241, 304);
+            this.listBox1.Size = new System.Drawing.Size(300, 304);
             this.listBox1.TabIndex = 0;
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(407, 70);
+            this.listBox2.Location = new System.Drawing.Point(365, 70);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(241, 304);
+            this.listBox2.Size = new System.Drawing.Size(300, 304);
             this.listBox2.TabIndex = 1;
             // 
             // label1
