@@ -19,29 +19,38 @@ namespace GE_Employees
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
             openFileDialogAgentes.ShowDialog();
             textBox1.Text = openFileDialogAgentes.FileName;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            textBox2.Text = "";
             openFileDialogServicios.ShowDialog();
             textBox2.Text = openFileDialogServicios.FileName;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text != "") && (textBox2.Text != ""))
+            if ((textBox1.Text != "") && (textBox2.Text != "") && (textBox3.Text != ""))
             {
                 this.Hide();
-                var form2 = new Form2(textBox1.Text, textBox2.Text);
+                var form2 = new Form2(textBox1.Text, textBox2.Text, textBox3.Text);
                 form2.Closed += (s, args) => this.Close();
                 form2.Show();
             }
             else
             {
-                MessageBox.Show("Debe escoger 2 archivos para comenzar con el reparto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe escoger 3 archivos para comenzar con el reparto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = "";
+            openFileDialogOrdenes.ShowDialog();
+            textBox3.Text = openFileDialogOrdenes.FileName;
         }
     }
 }

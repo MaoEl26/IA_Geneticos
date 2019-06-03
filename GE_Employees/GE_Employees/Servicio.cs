@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GE_Employees
 {
-    class Servicio
+    public class Servicio
     {
         public string codigo { get; set; }
         public string descripcion { get; set; }
@@ -20,6 +20,10 @@ namespace GE_Employees
             this.comision = comision;
             this.descripcion = descripcion;
             this.duracion = duracion;
+        }
+        public string verbose()
+        {
+            return "Codigo: " + codigo + "\nDescripcion: " + descripcion + "\nDuracion: " + duracion + " horas" + "\nComision: $" + comision;
         }
     }
 }

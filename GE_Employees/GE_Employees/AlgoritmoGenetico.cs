@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GE_Employees
 {
 
-    class AlgoritmoGenetico
+    public class AlgoritmoGenetico
     {
         private List<Tipo> tipos = new List<Tipo>();
         public int tipo;
