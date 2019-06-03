@@ -15,6 +15,7 @@ namespace GE_Employees
         public int tamannoPoblacion;
         public float probabilidadMutacion;
         public float probabilidadCruzada;
+        public float finalFitness = -1;
 
         private System.Random rand = new System.Random();
 
@@ -41,7 +42,12 @@ namespace GE_Employees
 
             this.tamannoPoblacion = ((tamannoPoblacion & 1) == 1 ? tamannoPoblacion : tamannoPoblacion + 1);
 
-            fitnessXGen = new List<float>(this.tamannoPoblacion);
+            fitnessXGen = new List<float>();
+            for(int i = 0; i < tamannoPoblacion  ; i++)
+            {
+                fitnessXGen.Add(-1F);
+            }
+            //Console.Out.WriteLine(fitnessXGen.Count());
             tipos.Add(new Aleatorio("Aleatorio"));
             tipos.Add(new Torneo("Torneo"));
             tipos.Add(new Fortuna("Fortuna"));
@@ -113,19 +119,28 @@ namespace GE_Employees
             varianzaComision /= colaboradores.Count();
 
             return varianzaComision + (sobretiempo * proporcion);
+            
         }
 
         private Dictionary<int, int> Mutation(Dictionary<int, int> hijo)
         {
+            Dictionary<int, int> temp = new Dictionary<int, int>();
             foreach (KeyValuePair<int, int> gen in hijo)
             {
                 if (rand.Next(0, 1000) < (probabilidadMutacion * 1000))
                 {
                     string codigoServicio = ordenes[gen.Value].codigoServicio;
-
-                    hijo[gen.Key] = colaboradoresXServicio[codigoServicio]
-                        [rand.Next(0, colaboradoresXServicio[codigoServicio].Count())];
+                    if (temp.Keys.Contains(hijo[gen.Key]))
+                    {
+                        temp.Remove(hijo[gen.Key]);                        
+                    }
+                    temp.Add(hijo[gen.Key], colaboradoresXServicio[codigoServicio][rand.Next(0, colaboradoresXServicio[codigoServicio].Count())]);
                 }
+            }
+            foreach(KeyValuePair<int,int> tempItem in temp)
+            {
+                hijo.Remove(tempItem.Key);
+                hijo.Add(tempItem.Key, tempItem.Value);
             }
             return hijo;
         }
@@ -134,7 +149,7 @@ namespace GE_Employees
         {
             int indiceMejorFit = -1;
 
-            for (int i = 0; i < tamannoPoblacion; ++i)
+            for (int i = 0; i < tamannoPoblacion - 1; ++i)
             {
                 fitnessXGen[i] = Fitness(i);
 
@@ -158,6 +173,7 @@ namespace GE_Employees
             }
             hijos.Add(poblacion[indiceMejorFit]);
             poblacion = hijos;
+            finalFitness = fitnessXGen[indiceMejorFit];
         }
 
         private Dictionary<int, Pareja<int, int>> ColaboradorComisionHoras(int indice)

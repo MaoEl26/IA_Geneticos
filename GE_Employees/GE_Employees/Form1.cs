@@ -15,6 +15,7 @@ namespace GE_Employees
         public Setup()
         {
             InitializeComponent();
+            vagancia();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,6 +52,13 @@ namespace GE_Employees
             textBox3.Text = "";
             openFileDialogOrdenes.ShowDialog();
             textBox3.Text = openFileDialogOrdenes.FileName;
+        }
+
+        public void vagancia()
+        {
+            textBox1.Text = "C:\\Users\\Isaac\\Desktop\\Cosas-De-La-U\\Semestre XIII\\Inteligencia Artificial\\Progras\\Progra 2\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLagentes.xml";
+            textBox2.Text = "C:\\Users\\Isaac\\Desktop\\Cosas-De-La-U\\Semestre XIII\\Inteligencia Artificial\\Progras\\Progra 2\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLservicios.xml";
+            textBox3.Text = "C:\\Users\\Isaac\\Desktop\\Cosas-De-La-U\\Semestre XIII\\Inteligencia Artificial\\Progras\\Progra 2\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLordenes.xml";
         }
     }
 }

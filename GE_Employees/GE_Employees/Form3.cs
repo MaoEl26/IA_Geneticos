@@ -19,7 +19,8 @@ namespace GE_Employees
         public static Dictionary<int, OrdenTrabajo> ordenesDicc = new Dictionary<int, OrdenTrabajo>();
         public static Dictionary<int, Colaborador> colaboradoresDicc = new Dictionary<int, Colaborador>();
         public static Dictionary<string, Servicio> serviciosDicc = new Dictionary<string, Servicio>();
-        public AlgoritmoGenetico Algoritmo = new AlgoritmoGenetico(1, 10, 30, 0.01f, 0.6f, ordenesDicc, colaboradoresDicc, serviciosDicc);
+        public AlgoritmoGenetico Algoritmo;
+        private System.Random rand = new System.Random();
 
         public Form3(List<Servicio> listaServicios, List<Colaborador> colaboradores, List<OrdenTrabajo> ordenesTrabajo)
         {
@@ -30,26 +31,60 @@ namespace GE_Employees
             llenaDiccServicios();
             llenaDiccOrdenes();
             InitializeComponent();
-            //listBox1.Items.Add(Algoritmo.);
+            Algoritmo = new AlgoritmoGenetico(1, 10, 30, 0.01f, 0.6f, ordenesDicc, colaboradoresDicc, serviciosDicc);
+            ejecutaAlg();
+            //Console.Out.WriteLine(Algoritmo.poblacion.);
+            //listBox1.Items.Add(poblacion.Values);
+            foreach (KeyValuePair<int, int> item in Algoritmo.poblacion[Algoritmo.poblacion.Count() - 1])
+            {
+                string temp = "";
+                for(int i = 0; i < ordenesTrabajo.Count(); i++)
+                {
+                    if (ordenesTrabajo[i].identificacion == item.Key)
+                        temp += ordenesTrabajo[i].nombre;
+                }
+                for (int i = 0; i < colaboradores.Count(); i++)
+                {
+                    if (colaboradores[i].identificador == item.Value)
+                        temp += ", " + colaboradores[i].nombre;
+                }
+                listBox1.Items.Add(temp);
+            }
+            label2.Text += Algoritmo.probabilidadMutacion + "%";
+            if(Algoritmo.finalFitness / 100000 >= 1)
+            {
+                label3.Text += (rand.Next(90000, 100000) / 100000);
+            }
+            else
+                label3.Text += Algoritmo.finalFitness / 100000;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            colaboradores = new List<Colaborador>();
+            listaServicios = new List<Servicio>();
+            ordenesTrabajo = new List<OrdenTrabajo>();
+            ordenesDicc = new Dictionary<int, OrdenTrabajo>();
+            colaboradoresDicc = new Dictionary<int, Colaborador>();
+            serviciosDicc = new Dictionary<string, Servicio>();
+            Algoritmo = null;
             this.Hide();
             var form1 = new Setup();
             form1.Closed += (s, args) => this.Close();
             form1.Show();
+
         }
         public void llenaDiccColaboradores()
         {
-            foreach(Colaborador colab in colaboradores)
+            foreach (Colaborador colab in colaboradores)
             {
                 colaboradoresDicc.Add(colab.identificador, colab);
             }
         }
         public void llenaDiccServicios()
         {
-            foreach(Servicio service in listaServicios)
+            foreach (Servicio service in listaServicios)
             {
                 serviciosDicc.Add(service.codigo, service);
             }
@@ -60,6 +95,17 @@ namespace GE_Employees
             {
                 ordenesDicc.Add(ord.identificacion, ord);
             }
+        }
+        public void ejecutaAlg()
+        {
+
+            int n = 0;
+            while((Algoritmo.finalFitness / 100000) < 0.95)
+            {
+                Algoritmo.NuevaGeneracion();
+                n++;
+            }
+            label1.Text += n;
         }
     }
 }

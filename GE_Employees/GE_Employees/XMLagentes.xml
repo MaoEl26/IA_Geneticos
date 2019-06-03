@@ -2,17 +2,17 @@
 <agentes>
     <agente>
         <nombre>Mario Vargas</nombre>
-        <servicios>ICE, ICG</servicios>
+        <servicios>ICE,ICG</servicios>
         <identificador>1</identificador>
     </agente>
     <agente>
         <nombre>Luis Blanco</nombre>
-        <servicios>ICG, ILA, RCE</servicios>
+        <servicios>ICG,ILA,RCE</servicios>
         <identificador>2</identificador>
     </agente>
     <agente>
         <nombre>Esteban Montero</nombre>
-        <servicios>ILA, RCG</servicios>
+        <servicios>ILA,RCG</servicios>
         <identificador>3</identificador>
     </agente>
     <agente>
@@ -22,17 +22,17 @@
     </agente>
     <agente>
         <nombre>Felipe Chinchilla</nombre>
-        <servicios>ICE, ICG, ILA, RCG</servicios>
+        <servicios>ICE,ICG,ILA,RCG</servicios>
         <identificador>5</identificador>
     </agente>
     <agente>
         <nombre>Carlos Brenes</nombre>
-        <servicios>ILA, RCG, RLA</servicios>
+        <servicios>ILA,RCG,RLA</servicios>
         <identificador>6</identificador>
     </agente>
     <agente>
         <nombre>Orlando Mora</nombre>
-        <servicios>ILA, RCG, ICG, RLA</servicios>
+        <servicios>ILA,RCG,ICG,RLA</servicios>
         <identificador>7</identificador>
     </agente>
     <agente>
@@ -42,12 +42,12 @@
     </agente>
     <agente>
         <nombre>John Hernandez</nombre>
-        <servicios>ILA, RLA</servicios>
+        <servicios>ILA,RLA</servicios>
         <identificador>9</identificador>
     </agente>
     <agente>
         <nombre>Martin Quesada</nombre>
-        <servicios>ICG, RLA</servicios>
+        <servicios>ICG,RLA</servicios>
         <identificador>10</identificador>
     </agente>
 

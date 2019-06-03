@@ -72,9 +72,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 382);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
+            this.label2.Size = new System.Drawing.Size(170, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Probabilidad de mutacion:";
+            this.label2.Text = "Probabilidad de mutacion: ";
             // 
             // label3
             // 
