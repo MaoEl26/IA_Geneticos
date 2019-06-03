@@ -12,9 +12,15 @@ namespace GE_Employees
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(string agenteFile,string serviciosFile)
         {
             InitializeComponent();
+            LoadXMLAgentes LoadAgentes = new LoadXMLAgentes();
+            LoadAgentes.parseXML(agenteFile);
+            foreach (Colaborador colab in LoadAgentes.colaboradores)
+            {
+                listBox1.Items.Add(colab.verbose());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

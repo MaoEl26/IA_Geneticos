@@ -38,5 +38,15 @@ namespace GE_Employees
             }
             if(!encontrado) codigosServicio.Add(codigoServicio);
         }
+        public string verbose()
+        {
+            string serviciosFinal = "[";
+            foreach (string Serv in codigosServicio)
+            {
+                serviciosFinal += Serv + ", ";
+            }
+            serviciosFinal += "]";
+            return nombre + ", " + identificador + ", " + serviciosFinal;
+        }
     }
 }

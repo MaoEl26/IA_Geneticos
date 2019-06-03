@@ -34,7 +34,7 @@ namespace GE_Employees
             if ((textBox1.Text != "") && (textBox2.Text != ""))
             {
                 this.Hide();
-                var form2 = new Form2();
+                var form2 = new Form2(textBox1.Text, textBox2.Text);
                 form2.Closed += (s, args) => this.Close();
                 form2.Show();
             }

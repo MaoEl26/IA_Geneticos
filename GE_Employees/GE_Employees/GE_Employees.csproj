@@ -68,6 +68,7 @@
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Fortuna.cs" />
+    <Compile Include="LoadXMLAgentes.cs" />
     <Compile Include="OrdenTrabajo.cs" />
     <Compile Include="Pareja.cs" />
     <Compile Include="Program.cs" />
