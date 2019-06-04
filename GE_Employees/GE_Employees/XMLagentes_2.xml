@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agentes>
+    <agente>
+        <nombre>Leonardo Vargas</nombre>
+        <servicios>ICE,ICG,ILA,RLA</servicios>
+        <identificador>11</identificador>
+    </agente>
+    <agente>
+        <nombre>Graciela Blanco</nombre>
+        <servicios>ICG,RCE</servicios>
+        <identificador>22</identificador>
+    </agente>
+    <agente>
+        <nombre>Rodolfo Montero</nombre>
+        <servicios>ILA,RCG</servicios>
+        <identificador>33</identificador>
+    </agente>
+    <agente>
+        <nombre>Alvaro Mora</nombre>
+        <servicios>RLA</servicios>
+        <identificador>44</identificador>
+    </agente>
+    <agente>
+        <nombre>Felipe Chinchilla</nombre>
+        <servicios>ICE,ICG,ILA,RCG</servicios>
+        <identificador>55</identificador>
+    </agente>
+    <agente>
+        <nombre>John Brenes</nombre>
+        <servicios>ILA,RLA</servicios>
+        <identificador>66</identificador>
+    </agente>
+    <agente>
+        <nombre>Linda Mora</nombre>
+        <servicios>ILA,ICG,RLA</servicios>
+        <identificador>77</identificador>
+    </agente>
+    <agente>
+        <nombre>Fernando Rodriguez</nombre>
+        <servicios>ICE, ILA</servicios>
+        <identificador>88</identificador>
+    </agente>
+    <agente>
+        <nombre>Karina Hernandez</nombre>
+        <servicios>ICG,ILA,RLA</servicios>
+        <identificador>99</identificador>
+    </agente>
+    <agente>
+        <nombre>Maria Granados</nombre>
+        <servicios>ICE,ICG,RLA, ILA</servicios>
+        <identificador>1010</identificador>
+    </agente>
+    <agente>
+        <nombre>Marlon Granados</nombre>
+        <servicios>ICG,RLA</servicios>
+        <identificador>1111</identificador>
+    </agente>
+    <agente>
+        <nombre>Gerardo Quesada</nombre>
+        <servicios>ICG,RLA</servicios>
+        <identificador>1212</identificador>
+    </agente>
+    <agente>
+        <nombre>Fernanda Murillo</nombre>
+        <servicios>ICE,ICG,RLA</servicios>
+        <identificador>1313</identificador>
+    </agente>
+    <agente>
+        <nombre>Ricardo Mora</nombre>
+        <servicios>ICG</servicios>
+        <identificador>1414</identificador>
+    </agente>
+    <agente>
+        <nombre>Marco Picado</nombre>
+        <servicios>ILA</servicios>
+        <identificador>1515</identificador>
+    </agente>
+
+</agentes>
