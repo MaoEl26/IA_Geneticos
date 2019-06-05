@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace GE_Employees
 {
-    class LoadXMLAgentes
+    public class LoadXMLAgentes
     {
         public int identificador;
         public string nombre;
@@ -44,6 +44,17 @@ namespace GE_Employees
                 colaboradores.Add(c);
 
             }
+        }
+        public Colaborador GetColaborador(string name)
+        {
+            foreach(Colaborador toFind in colaboradores)
+            {
+                if (toFind.nombre == name)
+                {
+                    return toFind;
+                }
+            }
+            return null;
         }
     }
 }

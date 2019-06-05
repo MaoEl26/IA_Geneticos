@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GE_Employees
 {
-    class Colaborador
+    public class Colaborador
     {
         public int identificador {get;set;}
         public string nombre {get;set;}
@@ -46,7 +46,7 @@ namespace GE_Employees
                 serviciosFinal += Serv + ", ";
             }
             serviciosFinal += "]";
-            return nombre + ", " + identificador + ", " + serviciosFinal;
+            return "Nombre: " + nombre + "\nIdentificador: " + identificador + "\nServicios Disponibles: " + serviciosFinal;
         }
     }
 }
