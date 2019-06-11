@@ -48,5 +48,17 @@ namespace GE_Employees
             serviciosFinal += "]";
             return "Nombre: " + nombre + "\nIdentificador: " + identificador + "\nServicios Disponibles: " + serviciosFinal;
         }
+
+        override
+        public string ToString()
+        {
+            string serviciosFinal = "[";
+            foreach (string Serv in codigosServicio)
+            {
+                serviciosFinal += Serv + ", ";
+            }
+            serviciosFinal += "]";
+            return "Agente: " + nombre + "\nIdentificador: " + identificador + "\nServicios Disponibles: " + serviciosFinal;
+        }
     }
 }

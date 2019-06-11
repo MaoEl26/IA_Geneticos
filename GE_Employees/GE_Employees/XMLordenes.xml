@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ordenes>
+    <orden>
+        <nombre>Orden 1</nombre>
+        <codigoServicio>ICE</codigoServicio>
+        <identificador>1</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 2</nombre>
+        <codigoServicio>ILA</codigoServicio>
+        <identificador>2</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 3</nombre>
+        <codigoServicio>RCG</codigoServicio>
+        <identificador>3</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 4</nombre>
+        <codigoServicio>RLA</codigoServicio>
+        <identificador>4</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 5</nombre>
+        <codigoServicio>ICG</codigoServicio>
+        <identificador>5</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 6</nombre>
+        <codigoServicio>RLA</codigoServicio>
+        <identificador>6</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 7</nombre>
+        <codigoServicio>ICG</codigoServicio>
+        <identificador>7</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 8</nombre>
+        <codigoServicio>ICE</codigoServicio>
+        <identificador>8</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 9</nombre>
+        <codigoServicio>ICG</codigoServicio>
+        <identificador>9</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 10</nombre>
+        <codigoServicio>RCG</codigoServicio>
+        <identificador>10</identificador>
+    </orden>
+    <orden>
+        <nombre>Orden 11</nombre>
+        <codigoServicio>RLA</codigoServicio>
+        <identificador>11</identificador>
+    </orden>
+</ordenes>

@@ -56,9 +56,9 @@ namespace GE_Employees
 
         public void vagancia()
         {
-            textBox1.Text = "C:\\Users\\Isaac\\Desktop\\Cosas-De-La-U\\Semestre XIII\\Inteligencia Artificial\\Progras\\Progra 2\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLagentes.xml";
-            textBox2.Text = "C:\\Users\\Isaac\\Desktop\\Cosas-De-La-U\\Semestre XIII\\Inteligencia Artificial\\Progras\\Progra 2\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLservicios.xml";
-            textBox3.Text = "C:\\Users\\Isaac\\Desktop\\Cosas-De-La-U\\Semestre XIII\\Inteligencia Artificial\\Progras\\Progra 2\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLordenes.xml";
+            textBox1.Text = "E:\\IA\\MaoEl26\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLagentes.xml";
+            textBox2.Text = "E:\\IA\\MaoEl26\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLservicios.xml";
+            textBox3.Text = "E:\\IA\\MaoEl26\\IA_Geneticos\\GE_Employees\\GE_Employees\\XMLordenes.xml";
         }
     }
 }

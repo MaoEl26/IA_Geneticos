@@ -25,5 +25,11 @@ namespace GE_Employees
         {
             return "Codigo: " + codigo + "\nDescripcion: " + descripcion + "\nDuracion: " + duracion + " horas" + "\nComision: $" + comision;
         }
+
+        override
+        public string ToString() 
+        {
+            return "Codigo: " + codigo + "\nDescripcion: " + descripcion + "\nDuracion: " + duracion + " horas" + "\nComision: $" + comision;
+        }
     }
 }

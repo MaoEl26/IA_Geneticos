@@ -42,6 +42,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.ContextMenuStrip = this.contextMenuStripGen;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(12, 54);
@@ -107,6 +108,7 @@
             this.detallesToolStripMenuItem.Name = "detallesToolStripMenuItem";
             this.detallesToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.detallesToolStripMenuItem.Text = "Detalles";
+            this.detallesToolStripMenuItem.Click += new System.EventHandler(this.detallesToolStripMenuItem_Click);
             // 
             // Form3
             // 

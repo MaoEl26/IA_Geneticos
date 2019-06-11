@@ -16,17 +16,27 @@ namespace GE_Employees
         public List<Servicio> listaServicios = new List<Servicio>();
         public List<OrdenTrabajo> ordenesTrabajo = new List<OrdenTrabajo>();
 
+        public LoadXMLAgentes LoadAgentes;
+        public LoadXMLServicios LoadServicios;
+        public LoadXMLOrdenes LoadOrdenes;
+
         public static Dictionary<int, OrdenTrabajo> ordenesDicc = new Dictionary<int, OrdenTrabajo>();
         public static Dictionary<int, Colaborador> colaboradoresDicc = new Dictionary<int, Colaborador>();
         public static Dictionary<string, Servicio> serviciosDicc = new Dictionary<string, Servicio>();
         public AlgoritmoGenetico Algoritmo;
         private System.Random rand = new System.Random();
 
-        public Form3(List<Servicio> listaServicios, List<Colaborador> colaboradores, List<OrdenTrabajo> ordenesTrabajo)
+        private string salida = "";
+
+        public Form3(List<Servicio> listaServicios, List<Colaborador> colaboradores, List<OrdenTrabajo> ordenesTrabajo,LoadXMLAgentes LoadAgentes
+            ,LoadXMLOrdenes LoadOrdenes, LoadXMLServicios LoadServicios)
         {
             this.listaServicios = listaServicios;
             this.colaboradores = colaboradores;
             this.ordenesTrabajo = ordenesTrabajo;
+            this.LoadAgentes = LoadAgentes;
+            this.LoadOrdenes = LoadOrdenes;
+            this.LoadServicios = LoadServicios;
             llenaDiccColaboradores();
             llenaDiccServicios();
             llenaDiccOrdenes();
@@ -35,20 +45,21 @@ namespace GE_Employees
             ejecutaAlg();
             //Console.Out.WriteLine(Algoritmo.poblacion.);
             //listBox1.Items.Add(poblacion.Values);
+            List<Colaborador> temporal = new List<Colaborador>();
             foreach (KeyValuePair<int, int> item in Algoritmo.poblacion[Algoritmo.poblacion.Count() - 1])
             {
                 string temp = "";
-                for(int i = 0; i < ordenesTrabajo.Count(); i++)
-                {
-                    if (ordenesTrabajo[i].identificacion == item.Key)
-                        temp += ordenesTrabajo[i].nombre;
-                }
                 for (int i = 0; i < colaboradores.Count(); i++)
                 {
                     if (colaboradores[i].identificador == item.Value)
-                        temp += ", " + colaboradores[i].nombre;
-                }
-                listBox1.Items.Add(temp);
+                        if (!temporal.Contains(LoadAgentes.GetColaborador(colaboradores[i].nombre)))
+                        {
+                            temporal.Add(colaboradores[i]);
+                            temp = colaboradores[i].nombre;
+                            listBox1.Items.Add(temp);
+                            break;
+                        }
+                }  
             }
             label2.Text += Algoritmo.probabilidadMutacion + "%";
             if(Algoritmo.finalFitness / 100000 >= 1)
@@ -58,6 +69,59 @@ namespace GE_Employees
             else
                 label3.Text += Algoritmo.finalFitness / 100000;
 
+        }
+
+        private void detallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                string colab = listBox1.SelectedItem.ToString();
+                Colaborador colaborador = LoadAgentes.GetColaborador(colab);
+                setSalida(colaborador);
+                MessageBox.Show(salida,
+                    "Asignado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debe escoger un agente para poder ver sus detalles", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void setSalida(Colaborador colaborador)
+        {
+            List<OrdenTrabajo> temp = new List<OrdenTrabajo>();
+            foreach (KeyValuePair<int, int> item in Algoritmo.poblacion[Algoritmo.poblacion.Count() - 1])
+            {
+                
+                if (colaborador.identificador == item.Value)
+                {
+                    for (int i = 0; i < ordenesTrabajo.Count(); i++)
+                    {
+                        if (ordenesTrabajo[i].identificacion == item.Key)
+                        {
+                            temp.Add(ordenesTrabajo[i]);
+                            break;
+                        }
+                    }
+                }
+            }
+            String tempText = "";
+            tempText = colaborador.ToString() + "\n";
+            int comision=0;
+            int duracion=0;
+            String ordenes = "";
+
+            for(int i = 0; i < temp.Count(); i++)
+            {
+                Servicio servicio = LoadServicios.GetServicio(temp[i].codigoServicio);
+                comision += servicio.comision;
+                duracion += servicio.duracion;
+                ordenes += temp[i].nombre + ", ";
+            }
+            tempText += "Ordenes Atendidas: " + ordenes + "\n";
+            tempText += "Comision total: $" + comision+"\n";
+            tempText += "Duracion total: " + duracion + "horas";
+            salida = tempText;
         }
 
         private void button1_Click(object sender, EventArgs e)

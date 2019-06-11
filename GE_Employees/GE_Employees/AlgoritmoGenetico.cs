@@ -166,7 +166,7 @@ namespace GE_Employees
             {
                 Tuple<int, int> padres = tipos[tipo].Seleccion(fitnessXGen);
 
-                Tuple<Dictionary<int, int>, Dictionary<int, int>> hijo = Crossover(padres.Item1, padres.Item2);
+                Tuple<Dictionary<int, int>, Dictionary<int, int>> hijo = Cruces(padres.Item1, padres.Item2);
 
                 hijos.Add(Mutation(hijo.Item1));
                 hijos.Add(Mutation(hijo.Item2));
@@ -178,10 +178,8 @@ namespace GE_Employees
 
         private Dictionary<int, Pareja<int, int>> ColaboradorComisionHoras(int indice)
         {
-            // Agent ID : (Commission, Hours)
             Dictionary<int, Pareja<int, int>> comisionColaborador = new Dictionary<int, Pareja<int, int>>();
 
-            // Order ID : Agent ID
             foreach (KeyValuePair<int, int> entrada in poblacion[indice])
             {
                 if (comisionColaborador.ContainsKey(entrada.Value))
@@ -198,7 +196,7 @@ namespace GE_Employees
             return comisionColaborador;
         }
 
-        private Tuple<Dictionary<int, int>, Dictionary<int, int>> Crossover(int padreA, int padreB)
+        private Tuple<Dictionary<int, int>, Dictionary<int, int>> Cruces(int padreA, int padreB)
         {
             Dictionary<int, int> hijoA = new Dictionary<int, int>();
             Dictionary<int, int> hijoB = new Dictionary<int, int>();

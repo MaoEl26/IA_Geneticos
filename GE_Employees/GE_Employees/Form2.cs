@@ -37,10 +37,13 @@ namespace GE_Employees
 
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form3 = new Form3(LoadServicios.listaServicios, LoadAgentes.colaboradores, LoadOrdenes.ordenesTrabajo);
+            var form3 = new Form3(LoadServicios.listaServicios, LoadAgentes.colaboradores, 
+                LoadOrdenes.ordenesTrabajo,LoadAgentes,LoadOrdenes,LoadServicios);
             form3.Closed += (s, args) => this.Close();
             form3.Show();
         }

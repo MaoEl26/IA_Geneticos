@@ -22,5 +22,11 @@ namespace GE_Employees
         {
             return "Identificacion de la orden: " + identificacion + "\nCliente: " + nombre + "\nCodigo de servicio: " + codigoServicio;
         }
+
+        override
+        public string ToString()
+        {
+            return "Orden Número: " + identificacion + "\nCliente: " + nombre;
+        }
     }
 }

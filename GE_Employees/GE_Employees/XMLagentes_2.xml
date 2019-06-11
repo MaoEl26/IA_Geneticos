@@ -37,7 +37,7 @@
     </agente>
     <agente>
         <nombre>Fernando Rodriguez</nombre>
-        <servicios>ICE, ILA</servicios>
+        <servicios>ICE,ILA</servicios>
         <identificador>88</identificador>
     </agente>
     <agente>
@@ -47,7 +47,7 @@
     </agente>
     <agente>
         <nombre>Maria Granados</nombre>
-        <servicios>ICE,ICG,RLA, ILA</servicios>
+        <servicios>ICE,ICG,RLA,ILA</servicios>
         <identificador>1010</identificador>
     </agente>
     <agente>

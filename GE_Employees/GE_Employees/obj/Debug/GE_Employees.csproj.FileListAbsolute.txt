@@ -10,3 +10,15 @@ C:\Users\Isaac\Desktop\Cosas-De-La-U\Semestre XIII\Inteligencia Artificial\Progr
 C:\Users\Isaac\Desktop\Cosas-De-La-U\Semestre XIII\Inteligencia Artificial\Progras\Progra 2\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.exe
 C:\Users\Isaac\Desktop\Cosas-De-La-U\Semestre XIII\Inteligencia Artificial\Progras\Progra 2\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.pdb
 C:\Users\Isaac\Desktop\Cosas-De-La-U\Semestre XIII\Inteligencia Artificial\Progras\Progra 2\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.Setup.resources
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.csprojAssemblyReference.cache
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.Setup.resources
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.Form2.resources
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.Form3.resources
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.Properties.Resources.resources
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.csproj.GenerateResource.cache
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.csproj.CoreCompileInputs.cache
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.exe
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\obj\Debug\GE_Employees.pdb
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\bin\Debug\GE_Employees.exe.config
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\bin\Debug\GE_Employees.exe
+E:\IA\MaoEl26\IA_Geneticos\GE_Employees\GE_Employees\bin\Debug\GE_Employees.pdb
