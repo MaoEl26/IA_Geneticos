@@ -164,7 +164,7 @@ namespace GE_Employees
         {
 
             int n = 0;
-            while((Algoritmo.finalFitness / 100000) < 0.95)
+            while((Algoritmo.finalFitness / 100000) < 0.9)
             {
                 Algoritmo.NuevaGeneracion();
                 n++;

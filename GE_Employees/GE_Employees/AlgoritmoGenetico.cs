@@ -94,7 +94,7 @@ namespace GE_Employees
 
         private float Fitness(int index)
         {
-            // Agent ID : (Commission, Hours)
+            
             Dictionary<int, Pareja<int, int>> tarifaXColaborador = ColaboradorComisionHoras(index);
 
             int sobretiempo = 0;
@@ -105,7 +105,7 @@ namespace GE_Employees
             {
                 esperanzaComision += colaborador.Value.valor1;
 
-                // Sum total overtime
+                
                 if (colaborador.Value.valor2 > 40) sobretiempo += (colaborador.Value.valor2 - 40);
             }
             esperanzaComision /= colaboradores.Count();
@@ -129,6 +129,7 @@ namespace GE_Employees
             {
                 if (rand.Next(0, 1000) < (probabilidadMutacion * 1000))
                 {
+
                     string codigoServicio = ordenes[gen.Value].codigoServicio;
                     if (temp.Keys.Contains(hijo[gen.Key]))
                     {

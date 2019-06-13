@@ -2,7 +2,7 @@
 <agentes>
     <agente>
         <nombre>Mario Vargas</nombre>
-        <servicios>ICE,ICG</servicios>
+        <servicios>ICE</servicios>
         <identificador>1</identificador>
     </agente>
     <agente>
@@ -22,7 +22,7 @@
     </agente>
     <agente>
         <nombre>Felipe Chinchilla</nombre>
-        <servicios>ICE,ICG,ILA,RCG</servicios>
+        <servicios>ICG,ILA,RCG</servicios>
         <identificador>5</identificador>
     </agente>
     <agente>
@@ -37,7 +37,7 @@
     </agente>
     <agente>
         <nombre>Marco Rodriguez</nombre>
-        <servicios>ICE</servicios>
+        <servicios>RCG</servicios>
         <identificador>8</identificador>
     </agente>
     <agente>
